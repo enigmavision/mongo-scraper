@@ -11,7 +11,7 @@ var noteSchema = new Schema({
 
   _headlineId: {
     type: Schema.Types.ObjectId,
-    ref: "Headline"
+    ref: "headline"
   },
   // date is just a string
   date: String,
@@ -20,7 +20,7 @@ var noteSchema = new Schema({
 });
 
 // Create the Note model using the noteSchema
-var Note = mongoose.model("Note", noteSchema);
+var note = mongoose.model("note", noteSchema);
 
 // Export the Note model
-module.exports = Note;
+module.exports = note;
